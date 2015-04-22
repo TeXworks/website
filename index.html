@@ -3,6 +3,7 @@
 <head>
 <title>TeXworks</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/tugstyle.css">
 <link rel="stylesheet" href="tw.css">
 <style type="text/css">
@@ -16,11 +17,20 @@ td {
 }
 ul.news {
   list-style-type: none;
-  padding-left: 0em;
+  padding-left: 11ex;
+}
+ul.news li {
+/*
+	margin-left: 10ex;
+	*/
 }
 ul.news li .release-date {
 	display: inline-block;
-	min-width: 10ex;
+	min-width: 11ex;
+	margin-left: -11ex;
+}
+ul.news li .changes {
+	white-space: nowrap;
 }
 ul.toc {
 	padding: 0px;
@@ -31,6 +41,7 @@ ul.toc {
 ul.toc li {
 	display: inline;
 	padding: 0px 0.25em;
+	white-space: nowrap;
 }
 ul.toc li:before {
 	content:"\0000bb";
@@ -39,14 +50,48 @@ ul.toc a {
 	color: inherit;
 	text-decoration: none;
 }
+div#logo {
+	width: 50%;
+	max-width: 256px;
+	height: auto;
+	margin-bottom: 3ex;
+}
+div#logo img {
+	width: 100%;
+}
+table.screenshots img {
+	width: 100%;
+}
+td {
+	vertical-align: top;
+	width: 30%;
+	max-width: 256px;
+}
+@media (max-width: 420px) {
+	ul.toc {
+		clear: both;
+	}
+	table.screenshots td {
+		padding: 8px;
+	}
+	ul {
+		padding-left: 3ex;
+	}
+	ul.toc {
+		font-size: 100%;
+	}
+	ul.toc li {
+		padding: 0px 0.5em;
+		line-height: 1.5;
+	}
+}
 </style>
-<script src="jquery-1.11.2.min.js"></script>
-<script src="https://googledrive.com/host/0B5iVT8Q7W44pbmxpeHVxTS1fM28/fetchDownloads.js"></script>
+<script type="JavaScript" src="jquery-1.11.2.min.js"></script>
+<script type="JavaScript" src="https://googledrive.com/host/0B5iVT8Q7W44pbmxpeHVxTS1fM28/fetchDownloads.js"></script>
 </head>
 <body>
-<div style="float: right; margin-left:1em;">
-<div style="background-image: url(img/TeXworks256.png); height: 256px; width: 256px;">
-</div>
+<div id="logo" style="float: right; margin-left:1em;">
+<img src="img/TeXworks256.png" alt="TeXworks Logo" >
 </div>
 
 <div class="get_tw_box">
@@ -62,7 +107,7 @@ ul.toc a {
 
 
 <h2>TeXworks<br><small>lowering the entry barrier to the TeX world</small></h2>
-<p><small><em>Jonathan Kew, Stefan L&ouml;ffler, Charlie Sharpsteen</em></small></p>
+<p><small><em>Jonathan&nbsp;Kew, Stefan&nbsp;L&ouml;ffler, Charlie&nbsp;Sharpsteen</em></small></p>
 
 <ul class="toc">
 	<li><a href="#News">News</a></li>
@@ -80,17 +125,17 @@ ul.toc a {
 <h3>News</h3>
 
 <ul class="news">
-  <li><span class="release-date">(Apr 2015)</span> TeXworks 0.4.6 released (<a href="#Getting_TeXworks">Get it</a> | <a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.6/NEWS">Changes</a>)</li>
-  <li><span class="release-date">(Apr 2013)</span> TeXworks 0.4.5 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.5/NEWS">Changes</a>)</li>
-  <li><span class="release-date">(Apr 2012)</span> TeXworks 0.4.4 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.4/NEWS">Changes</a>)</li>
-  <li><span class="release-date">(Jun 2011)</span> TeXworks 0.4.3 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.3/NEWS">Changes</a>)</li>
-  <li><span class="release-date">(Jun 2011)</span> TeXworks 0.4.2 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.2/NEWS">Changes</a>)</li>
-  <li><span class="release-date">(May 2011)</span> TeXworks 0.4.1 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.1/NEWS">Changes</a>)</li>
-  <li><span class="release-date">(Mar 2011)</span> TeXworks 0.4.0 released (<a href="#History_0.4.x">Changes</a>)</li>
-  <li><span class="release-date">(Oct 2009)</span> TeXworks 0.2.3 released</li>
-  <li><span class="release-date">(Oct 2009)</span> TeXworks 0.2.2 released</li>
-  <li><span class="release-date">(Oct 2009)</span> TeXworks 0.2.1 released</li>
-  <li><span class="release-date">(Sep 2009)</span> TeXworks 0.2.0 released (<a href="#History_0.2.x">Changes</a>)</li>
+  <li><span class="release-date">(Apr 2015) </span>TeXworks 0.4.6 released <span class="changes">(<a href="#Getting_TeXworks">Get it</a> | <a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.6/NEWS">Changes</a>)</span></li>
+  <li><span class="release-date">(Apr 2013) </span>TeXworks 0.4.5 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.5/NEWS">Changes</a>)</li>
+  <li><span class="release-date">(Apr 2012) </span>TeXworks 0.4.4 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.4/NEWS">Changes</a>)</li>
+  <li><span class="release-date">(Jun 2011) </span>TeXworks 0.4.3 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.3/NEWS">Changes</a>)</li>
+  <li><span class="release-date">(Jun 2011) </span>TeXworks 0.4.2 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.2/NEWS">Changes</a>)</li>
+  <li><span class="release-date">(May 2011) </span>TeXworks 0.4.1 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.1/NEWS">Changes</a>)</li>
+  <li><span class="release-date">(Mar 2011) </span>TeXworks 0.4.0 released (<a href="#History_0.4.x">Changes</a>)</li>
+  <li><span class="release-date">(Oct 2009) </span>TeXworks 0.2.3 released</li>
+  <li><span class="release-date">(Oct 2009) </span>TeXworks 0.2.2 released</li>
+  <li><span class="release-date">(Oct 2009) </span>TeXworks 0.2.1 released</li>
+  <li><span class="release-date">(Sep 2009) </span>TeXworks 0.2.0 released (<a href="#History_0.2.x">Changes</a>)</li>
 </ul>
 
 <a name="Introduction"></a>
@@ -124,7 +169,7 @@ If no binaries are available for your platform, you can grab a copy of the <a hr
 
 <p>A few screenshots are available showing the TeXworks 0.4 release running on the three major supported operating systems (click images to open full-size versions):</p>
 
-<table>
+<table class="screenshots">
 <tr>
   <td><a href="img/texworks-linux.png" target="_blank"><img src="img/texworks-linux-thumb.png" alt="Linux (Ubuntu) screenshot"><br></a>TeXworks on GNU/Linux (Ubuntu)</td>
   <td><a href="img/texworks-win7.png" target="_blank"><img src="img/texworks-win7-thumb.png" alt="Windows 7 screenshot"><br></a>TeXworks on Windows 7</td>

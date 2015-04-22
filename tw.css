@@ -11,8 +11,8 @@ div.get_tw_box {
 	width: 34ex;
 	clear: right;
 	float: right;
-	margin-top: 2ex;
 	display: none;
+	margin-bottom: 1ex;
 }
 #tw_downloads {
 	background-color: #eeeeec;
