@@ -125,7 +125,8 @@ td {
 <h3>News</h3>
 
 <ul class="news">
-  <li><span class="release-date">(Apr 2015) </span>TeXworks 0.4.6 released <span class="changes">(<a href="#Getting_TeXworks">Get it</a> | <a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.6/NEWS">Changes</a>)</span></li>
+  <li><span class="release-date">(Apr 2016) </span>TeXworks 0.6.0 released <span class="changes">(<a href="#Getting_TeXworks">Get it</a> | <a href="#History_0.6.x">Changes</a>)</span></li>
+  <li><span class="release-date">(Apr 2015) </span>TeXworks 0.4.6 released <span class="changes">(<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.6/NEWS">Changes</a>)</span></li>
   <li><span class="release-date">(Apr 2013) </span>TeXworks 0.4.5 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.5/NEWS">Changes</a>)</li>
   <li><span class="release-date">(Apr 2012) </span>TeXworks 0.4.4 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.4/NEWS">Changes</a>)</li>
   <li><span class="release-date">(Jun 2011) </span>TeXworks 0.4.3 released (<a href="https://raw.githubusercontent.com/TeXworks/texworks/release-0.4.3/NEWS">Changes</a>)</li>
@@ -202,6 +203,21 @@ If no binaries are available for your platform, you can grab a copy of the <a hr
 <h3>History</h3>
 
 <p>Odd-numbered series (0.1, 0.3, ...) are development series. Numerous snapshots are made available during the evolution of TeXworks, and feedback from those brave enough to use these experimental versions is greatly appreciated!</p>
+
+<a name="History_0.6.x"></a>
+<h4>The 0.6.x stable release series</h4>
+<p>The main focus of this release series is a complete overhaul of the PDF previewer. A lot of effort went into streamlining and improving the code &quot;under the hood&quot; while maintaining the general user experience. As a side effect, this brings about several improvements and often-requested features, such as:</p>
+
+<ul>
+  <li>Faster rendering</li>
+  <li>Major performance improvements at high magnifications</li>
+  <li>Continuous scrolling mode &mdash; no more abrupt jumps from one page to the next (the non-continuous mode is still available from the View menu)</li>
+  <li>Two-pages (spread) mode</li>
+  <li>Selecting and copying text out of a PDF</li>
+  <li>Going back to the previous view after clicking on a link (by pressing Alt+left arrow)</li>
+</ul>
+
+<p>In addition, several bugs were fixed and support for Mac OS X was improved by adopting <a href="https://travis-ci.org/">Travis CI</a> for building and deploying.</p>
 
 <a name="History_0.4.x"></a>
 <h4>The 0.4.x stable release series</h4>
@@ -299,7 +315,6 @@ If no binaries are available for your platform, you can grab a copy of the <a hr
   <li>TeX documentation lookup/browser (partially implemented in <a href="http://twscript.paulanorman.com/downloads/">scripts</a> by Paul Norman)</li>
   <li>intelligent handling of TeX errors (partially implemented in a bundled script)</li>
   <li>assistance with graphics inclusion and format conversions</li>
-  <li>copy in the PDF preview</li>
   <li>support rich PDF features such as transitions, embedded media (sound, video), annotations, etc.</li>
   <li>customizable palettes of symbols, commands, etc.</li>
   <li>interaction with external editors and other tools</li>
@@ -310,7 +325,7 @@ If no binaries are available for your platform, you can grab a copy of the <a hr
   <li>tabbed editing</li>
 </ul>
 
-<p>Some of these features, and perhaps others, will be implemented in the current development version (0.5.x), leading to a third release series designated 0.6 once a suitable set of features is considered stable.</p>
+<p>Some of these features, and perhaps others, will be implemented in the current development version (0.7), leading to the next release series designated 0.8 once a suitable set of features is considered stable.</p>
 
 <p>We expect development priorities to be guided by user feedback as well as developer interest. A rough, tentative <a href="https://github.com/TeXworks/texworks/wiki/Roadmap">roadmap</a> is available on GitHub.</p>
 
