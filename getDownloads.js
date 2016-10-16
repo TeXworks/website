@@ -129,7 +129,7 @@ function updateUi() {
     }
 
     if (html !== '') {
-        if (osType === "Windows" || osType === "Mac") {
+        if (osType === "Windows") {
             html += '<div class="other_ways">Alternatively, your TeX distribution may offer a TeXworks package.</div>';
         } else if (osType === "Linux") {
             html += '<div class="other_ways">Alternatively, your Linux distribution may already offer a TeXworks package.</div>';
