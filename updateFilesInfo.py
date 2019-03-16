@@ -1,4 +1,5 @@
-import json
+from __future__ import print_function
+import json, sys
 try:
 	# Python3
 	from urllib.request import urlopen
@@ -22,7 +23,11 @@ for release in releases:
         size = -1
         fin = urlopen(url)
         meta = fin.info()
-        size = int(meta["Content-Length"])
+        if "Content-Length" in meta:
+            size = int(meta["Content-Length"])
+        else:
+            print('> Fetching %s to determine its size' % url, file = sys.stderr)
+            size = len(fin.read())
         fin.close()
 
         files['src'] = {'name': str('texworks-%s.zip' % release['tag_name']),
