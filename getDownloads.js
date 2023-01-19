@@ -23,7 +23,7 @@ if (appVersion.indexOf("Win") > -1) {
     osType = "Windows";
 } else if (appVersion.indexOf("Mac") > -1) {
     osType = "Mac";
-    osName = "Mac OS X";
+    osName = "macOS";
     var m = userAgent.match(/Mac\ OS\ X\ (\d+)(?:\.|_)(\d+)/);
     if (m && m.length >= 3) {
         osVersion = m[1] + "." + m[2];
@@ -48,7 +48,7 @@ if (appVersion.indexOf("Win") > -1) {
 
 ///////////////////////////// DEBUG
 // osType = "Windows";
-// osName = "Mac OS X";
+// osName = "macOS";
 // osVersion = "10.10";
 ///////////////////////////// DEBUG
 
@@ -107,7 +107,7 @@ function updateUi() {
         html = makeDownloadLink(releases.win, "Get TeXworks for Windows");
     }
     if (osType === "Mac" && releases.osx !== undefined) {
-        html = makeDownloadLink(releases.osx, "Get TeXworks for Mac&nbsp;OS&nbsp;X");
+        html = makeDownloadLink(releases.osx, "Get TeXworks for macOS");
     }
     if (osType === "Linux") {
         if (osName === 'Ubuntu') {
