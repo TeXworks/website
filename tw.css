@@ -135,13 +135,6 @@ div.get_tw_box {
 	margin-left: 1rem;
 }
 
-@media (max-width: 30rem) {
-	div.get_tw_box {
-		float: none;
-		margin: auto;
-	}
-}
-
 #tw_downloads {
 	background-color: #eeeeec;
 	min-height: 32px;
@@ -169,11 +162,28 @@ div.get_tw_box {
 	color: #000080;
 }
 #tw_downloads .info {
+	display: block;
 	font-size: 75%;
 	font-weight: normal;
 }
 #tw_downloads .other_ways {
 	margin-top: 1ex;
 	font-size: 75%;
+}
+
+@media (max-width: 30rem) {
+	div.get_tw_box {
+		float: none;
+		margin: auto;
+	}
+	#tw_downloads .link {
+		font-size: 110%;
+	}
+	#tw_downloads .info {
+		font-size: 100%;
+	}
+	#tw_downloads .other_ways {
+		font-size: 100%;
+	}
 }
 
