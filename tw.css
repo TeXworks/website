@@ -126,12 +126,22 @@ div.get_tw_box table.gadget td {
 	padding: 0px;
 }
 div.get_tw_box {
-	width: 34ex;
+	width: min(16rem, 100%);
 	clear: right;
 	float: right;
 	display: none;
 	margin-bottom: 1ex;
+	box-sizing: border-box;
+	margin-left: 1rem;
 }
+
+@media (max-width: 30rem) {
+	div.get_tw_box {
+		float: none;
+		margin: auto;
+	}
+}
+
 #tw_downloads {
 	background-color: #eeeeec;
 	min-height: 32px;
