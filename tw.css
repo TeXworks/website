@@ -96,14 +96,35 @@ div#logo {
 div#logo img {
 	width: 100%;
 }
-table.screenshots img {
+
+.screenshots {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+}
+.screenshots figure {
+	display: block;
+	flex: 1 1 0;
+	min-width: 128px;
+	max-width: 256px;
+	margin: 0px;
+}
+.screenshots figure img {
+	max-width: 100%;
+}
+.screenshots figcaption {
+	display: block;
+	text-align: center;
 	width: 100%;
 }
-td {
-	vertical-align: top;
-	width: 30%;
-	max-width: 256px;
+@media (max-width: 500px) {
+	.screenshots {
+		max-width: 256px;
+		margin: auto;
+	}
 }
+
 @media (max-width: 420px) {
 	ul.toc {
 		clear: both;
