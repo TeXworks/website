@@ -28,6 +28,11 @@ footer {
 	font-size: 0.85rem;
 }
 
+p.authors {
+	font-style: italic;
+	font-size: 0.85rem;
+}
+
 a:link {
 	color: navy;
 }
@@ -172,6 +177,9 @@ div.get_tw_box {
 }
 
 @media (max-width: 30rem) {
+	p.authors {
+		font-size: 1rem;
+	}
 	div.get_tw_box {
 		float: none;
 		margin: auto;
