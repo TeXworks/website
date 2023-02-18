@@ -38,7 +38,7 @@ for release in releases:
                         'version': version}
 
     for asset in release["assets"]:
-        if asset['name'].endswith(".dmg"): osType = "osx"
+        if asset['name'].endswith(".dmg"): osType = "mac"
         elif asset['name'].endswith(".exe"): osType = "win"
         elif asset['name'].endswith(".AppImage"): osType = "linux"
         else: continue
