@@ -111,14 +111,17 @@ function updateUi() {
         if (osName === 'Ubuntu') {
             html = '<a href="https://launchpad.net/~texworks/+archive/stable/" class="link">Get TeXworks for Ubuntu</a>';
         }
-        if (osName === 'openSUSE') {
+        else if (osName === 'openSUSE') {
             html = '<a href="http://software.opensuse.org/search?q=texworks&baseproject=ALL&lang=en&exclude_debug=true" class="link">Get TeXworks for openSUSE</a>';
         }
-        if (osName === 'Debian') {
+        else if (osName === 'Debian') {
             html = '<a href="http://packages.debian.org/de/sid/texworks" class="link">Get TeXworks for Debian</a>';
         }
-        if (osName === 'Fedora') {
+        else if (osName === 'Fedora') {
             html = '<a href="https://admin.fedoraproject.org/pkgdb/package/texworks/" class="link">Get TeXworks for Fedora</a>';
+        }
+        else {
+            html = makeDownloadLink(releases.linux, "Get TeXworks AppImage");
         }
     }
 
