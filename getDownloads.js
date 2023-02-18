@@ -1,6 +1,4 @@
-var osType, osName, osVersion, userAgent, appVersion, folderId;
-var downloads = [];
-var macOSXCodenames = {'10.5': 'Leopard', '10.6': 'Snow Leopard', '10.7': 'Lion', '10.8': 'Mountain Lion', '10.9': 'Mavericks', '10.10': 'Yosemite', '10.11': 'El Capitan'};
+var osType, osName, osVersion, userAgent, appVersion;
 
 var releases = {'src': {'name': 'texworks-release-0.6.7.zip', 'type': 'application/zip', 'size': 12827327, 'url': 'https://github.com/TeXworks/texworks/archive/release-0.6.7.zip', 'timestamp': '2022-02-26T13:44:52Z', 'version': '0.6.7'}, 'osx': {'name': 'TeXworks-macos10.15-0.6.7-202202261113-git_23c4c74.dmg', 'type': 'application/x-apple-diskimage', 'size': 27768150, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.7/TeXworks-macos10.15-0.6.7-202202261113-git_23c4c74.dmg', 'timestamp': '2022-02-26T13:42:42Z', 'version': '0.6.7'}, 'win': {'name': 'TeXworks-win-setup-0.6.7-202202261139-git_23c4c74.exe', 'type': 'application/x-ms-dos-executable', 'size': 26442003, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.7/TeXworks-win-setup-0.6.7-202202261139-git_23c4c74.exe', 'timestamp': '2022-02-26T13:43:50Z', 'version': '0.6.7'}}
 
