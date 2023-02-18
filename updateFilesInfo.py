@@ -40,6 +40,7 @@ for release in releases:
     for asset in release["assets"]:
         if asset['name'].endswith(".dmg"): osType = "osx"
         elif asset['name'].endswith(".exe"): osType = "win"
+        elif asset['name'].endswith(".AppImage"): osType = "linux"
         else: continue
         if osType in files: continue
         files[osType] = {'name': str(asset['name']),
