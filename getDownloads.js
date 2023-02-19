@@ -74,9 +74,14 @@ function formatDate(d) {
     return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
 }
 
-function makeDownloadLink(release, label) {
+function makeDownloadLink(release, osName, label) {
     "use strict";
     var html, m, info;
+
+    if (label === undefined) {
+        label = "Get TeXworks for " + osName;
+    }
+
     html = '<a href="' + release.url + '" class="link">'; // TODO: safeguard
     html += label;
     info = [];
@@ -102,10 +107,10 @@ function updateUi() {
     html = '';
 
     if (osType === "Windows" && releases.win !== undefined) {
-        html = makeDownloadLink(releases.win, "Get TeXworks for Windows");
+        html = makeDownloadLink(releases.win, "Windows");
     }
     if (osType === "Mac" && releases.mac !== undefined) {
-        html = makeDownloadLink(releases.mac, "Get TeXworks for macOS");
+        html = makeDownloadLink(releases.mac, "macOS");
     }
     if (osType === "Linux") {
         if (osName === 'Ubuntu') {
@@ -121,13 +126,13 @@ function updateUi() {
             html = '<a href="https://admin.fedoraproject.org/pkgdb/package/texworks/" class="link">Get TeXworks for Fedora</a>';
         }
         else {
-            html = makeDownloadLink(releases.linux, "Get TeXworks AppImage");
+            html = makeDownloadLink(releases.linux, "Linux", "Get TeXworks AppImage");
         }
     }
 
     if (html === '' && osType !== "Windows" && osType !== "Mac" && releases.src !== undefined) {
         // Fallback: Sources
-        html = makeDownloadLink(releases.src, "Get TeXworks Sources");
+        html = makeDownloadLink(releases.src, "", "Get TeXworks Sources");
     }
 
     if (html !== '') {
