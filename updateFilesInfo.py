@@ -65,5 +65,6 @@ for release in releases:
                          'size': int(asset["size"]),
                          'url': str(asset["browser_download_url"]),
                          'timestamp': str(asset["updated_at"]),
+                         'minOSversion': str(SemanticVersion(getOSVersion(asset['name'], osType))),
                          'version': str(version)}
 print(files)

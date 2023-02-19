@@ -1,6 +1,6 @@
 var osType, osName, osVersion, userAgent, appVersion;
 
-var releases = {'src': {'name': 'texworks-release-0.6.8.zip', 'type': 'application/zip', 'size': 12930941, 'url': 'https://github.com/TeXworks/texworks/archive/release-0.6.8.zip', 'timestamp': '2023-02-18T14:35:47Z', 'version': '0.6.8'}, 'linux': {'name': 'TeXworks-0.6.8-x86_64.AppImage', 'type': 'application/vnd.appimage', 'size': 41940160, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-0.6.8-x86_64.AppImage', 'timestamp': '2023-02-18T16:10:55Z', 'version': '0.6.8'}, 'mac': {'name': 'TeXworks-macos10.15-0.6.8-202302181247-git_6b1c6ab.dmg', 'type': 'application/x-apple-diskimage', 'size': 36975080, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-macos10.15-0.6.8-202302181247-git_6b1c6ab.dmg', 'timestamp': '2023-02-18T14:28:41Z', 'version': '0.6.8'}, 'win': {'name': 'TeXworks-win10-setup-0.6.8-202302181302-git_6b1c6ab.exe', 'type': 'application/x-ms-dos-executable', 'size': 23746856, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-win10-setup-0.6.8-202302181302-git_6b1c6ab.exe', 'timestamp': '2023-02-18T14:27:58Z', 'version': '0.6.8'}}
+var releases = {'src': {'name': 'texworks-release-0.6.8.zip', 'type': 'application/zip', 'size': 12930941, 'url': 'https://github.com/TeXworks/texworks/archive/release-0.6.8.zip', 'timestamp': '2023-02-18T14:35:47Z', 'version': '0.6.8'}, 'linux': {'name': 'TeXworks-0.6.8-x86_64.AppImage', 'type': 'application/vnd.appimage', 'size': 41940160, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-0.6.8-x86_64.AppImage', 'timestamp': '2023-02-18T16:10:55Z', 'minOSversion': '0', 'version': '0.6.8'}, 'mac': {'name': 'TeXworks-macos10.15-0.6.8-202302181247-git_6b1c6ab.dmg', 'type': 'application/x-apple-diskimage', 'size': 36975080, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-macos10.15-0.6.8-202302181247-git_6b1c6ab.dmg', 'timestamp': '2023-02-18T14:28:41Z', 'minOSversion': '10.15', 'version': '0.6.8'}, 'win': {'name': 'TeXworks-win10-setup-0.6.8-202302181302-git_6b1c6ab.exe', 'type': 'application/x-ms-dos-executable', 'size': 23746856, 'url': 'https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-win10-setup-0.6.8-202302181302-git_6b1c6ab.exe', 'timestamp': '2023-02-18T14:27:58Z', 'minOSversion': '10', 'version': '0.6.8'}}
 
 
 userAgent = navigator.userAgent;
@@ -95,6 +95,9 @@ function makeDownloadLink(release, osName, label) {
     }
     if (info.length > 0) {
         html += '<div class="info">' + info.join(', ') + '</div>';
+    }
+    if (release.minOSversion && release.minOSversion !== '0') {
+        html += '<div class="info">requires ' + osName + ' &ge; ' + release.minOSversion + '</div>';
     }
     html += '</a>';
     return html;
