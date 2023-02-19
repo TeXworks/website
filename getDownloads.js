@@ -149,7 +149,7 @@ function updateUi() {
         // (should not happen)
         html = '<a href="https://github.com/TeXworks/texworks/releases" class="link">Get TeXworks</a>';
     }
-    html += '<div class="other_ways">Not what you are looking for? Check <a href="#Getting_TeXworks">Getting TeXworks</a> for other ways to obtain TeXworks.</div>';
+    html += '<div class="other_ways">Not what you are looking for? Check <a href="#Getting_TeXworks">Getting TeXworks</a> for other versions and other ways to obtain TeXworks.</div>';
 
     el = document.getElementById("tw_downloads");
     el.innerHTML = html;
